@@ -667,29 +667,7 @@ So I am getting this exception "API rate limit exceeded for User ID"</p>
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title>[BUG]: Octokit.net is not trim compatible</title>
-	<link>https://github.com/octokit/octokit.net/issues/2737</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p>When you build a .NET executable with trimming enabled, the linker will produce trim warnings about Octokit because it is not trim compatible:</p>
-<pre><code>C:\Users\jrhod\.nuget\packages\octokit.2.1\lib
-etstandard2.0\Octokit.dll : error IL2104: Assembly &#39;Octokit&#39; produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [C:\Work\unreal-engine-tool\UET\uet\uet.csproj]
-C:\Program Files\dotnet\sdk.0.302\Sdks\Microsoft.NET.ILLink.Tasks\build\Microsoft.NET.ILLink.targets(86,5): error NETSDK1144: Optimizing assemblies for size failed. Optimization can be disabled by setting the PublishTrimmed property to false. [C:\Work\unreal-engine-
-tool\UET\uet\uet.csproj]</code></pre>
-<p>To fix this, Octokit needs to add the following properties to the C# project files:</p>
-<pre><code>  &lt;PropertyGroup&gt;
-    &lt;IsTrimmable&gt;true&lt;/IsTrimmable&gt;
-    &lt;EnableTrimAnalyzer&gt;true&lt;/EnableTrimAnalyzer&gt;
-    &lt;EnableSingleFileAnalyzer&gt;true&lt;/EnableSingleFileAnalyzer&gt;
-  &lt;/PropertyGroup&gt;</code></pre>
-<h3 id="versions">Versions</h3>
-<p>6.2.1</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
+
 
 <item>	<title>[DOCS]: Full class documentation</title>
 	<link>https://github.com/octokit/octokit.net/issues/2699</link>
