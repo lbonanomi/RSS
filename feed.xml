@@ -4,177 +4,347 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<item>	<title>📝 Docs: Suggest filtering out bots</title>
-	<link>https://github.com/github/accessibility-alt-text-bot/issues/45</link>
-	<description><![CDATA[ <pre><p>We’re using this action in github.com/typescript-eslint/typescript-eslint and although it works well, it takes up a <em>lot</em> of workflow space. Since it needs to run on all comments &amp; comment edits, every time another bot such as Netlify updates a comment -which is <em>very often</em> in auto-deploys!- the workflow runs. We filed https://github.com/typescript-eslint/typescript-eslint/issues/8205 on ourselves to disable the action on bots.</p>
-<p>Can I suggest having the README.md / first-run docs for accessibility-alt-text-bot disable the workflow for bot accounts?</p>
-<p>There’s something funny about the default docs of an action authored in the GitHub organization causing many many more workflow GitHub Action runs to take up more of GitHub’s $.</p></pre> ]]></description>
-</item>
-
-<item>	<title>🐛 Bug: No fallback behavior for action runs on forks</title>
-	<link>https://github.com/github/accessibility-alt-text-bot/issues/44</link>
-	<description><![CDATA[ <pre><p>When this action runs on a fork and doesn’t have permissions to fetch comments <em>(am I using the right terminology?)</em>, we see the dreaded <code>Resource not accessible by integration</code> error. Example from https://github.com/JoshuaKGoldberg/create-typescript-app/pull/1110 -&gt; https://github.com/JoshuaKGoldberg/create-typescript-app/actions/runs/7297169422/job/19886082551?pr=1110:</p>
-<pre class="plaintext"><code>Run github/accessibility-alt-text-bot@v1.4.0
-Run source /home/runner/work/_actions/github/accessibility-alt-text-bot/v1.4.0/queries.sh
-Detected bad alt text: true
-Event type: pr_description
-GraphQL: Resource not accessible by integration (addComment)
-Error: Process completed with exit code 1.</code></pre>
-<p>This is a similar issue to https://github.com/mtfoley/pr-compliance-action/issues/368 -&gt; https://github.com/mtfoley/pr-compliance-action/pull/374.</p>
-<p>Suggestion: can the bot log an informative message in the error about what it <em>would</em> post if it could? That way, if it’s not able to actually post a comment, a useful error can still be logged.</p></pre> ]]></description>
-</item>
-
-<item>	<title>Consider adding more lint checks to the default config</title>
-	<link>https://github.com/github/accessibility-alt-text-bot/issues/35</link>
-	<description><![CDATA[ <pre><h2 id="what">What</h2>
-<p>It would be great to add the <code>generic-link-text</code> markdown-lint rule. However, the name of this GitHub action would no longer apply if we added rules that do not pertain to alt text. Consider renaming this action and adding more rules.</p></pre> ]]></description>
-</item>
-
-<item>	<title>Add workflow input that always users to customize their markdown-lint config</title>
+<item>	<title>Add workflow input that allows users to customize their markdown-lint config</title>
 	<link>https://github.com/github/accessibility-alt-text-bot/issues/34</link>
 	<description><![CDATA[ <pre><h2 id="what">What</h2>
 <p>Now that we are using Markdown-lint to parse descriptions and comments, we have the ability for the bot to check against any markdown-lint. We should allow users to configure the lint rules that they want the bot to check against.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Update existing comment</title>
-	<link>https://github.com/github/accessibility-alt-text-bot/issues/31</link>
-	<description><![CDATA[ <pre><p>When alt-text is added (and the flagged problem is resolved) the comment placed by the workflow should be removed or hidden (and marked as resolved)</p></pre> ]]></description>
+<item>	<title>Help! - Full ESM Support 🆘</title>
+	<link>https://github.com/github/branch-deploy/issues/306</link>
+	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add all-contributors bot</title>
-	<link>https://github.com/github/accessibility-alt-text-bot/issues/22</link>
-	<description><![CDATA[ <pre><h3 id="what">What</h3>
-<p>This repo uses all-contributors to add contributors to the bottom of the readme. It would be nice to automate this process using the <a href="https://allcontributors.org/docs/en/bot/overview">all-contributors bot</a>.</p></pre> ]]></description>
-</item>
-
-<item>	<title>Request: add a search bar to every page</title>
-	<link>https://github.com/github/choosealicense.com/issues/1184</link>
-	<description><![CDATA[ <pre><p>It woul be great if there was a basic search bar through all the supported licenses. I prefer to view summaries of licenses on your website, so it’s helpful to be able to jump to the page for a specific license.</p>
-<p>Implementation options:
-* A basic search bar which loads a search result page is minimum
-* Ajax live search (i.e., autocomplete/search suggestions) would be a bonus, where you can jump right to the resulting page right from the autocomplete/search suggestions.</p></pre> ]]></description>
-</item>
-
-<item>	<title>Update or replace very old vendored version of jquery</title>
-	<link>https://github.com/github/choosealicense.com/issues/1139</link>
-	<description><![CDATA[ <pre><p>1.11.0 is vendored, 3.7.3 is latest. &lt; 3.5.0 has various reported XSS vulnerabilities; though I don’t see how they’d be exploitable through this site, it’d be nice to be rid of the old version anyway. Or better, remove the need for jquery?</p>
-<p>Thoughts or pull requests welcome.</p></pre> ]]></description>
-</item>
-
-<item>	<title>Paradox problem about getting an App ID: use JWT</title>
-	<link>https://github.com/github/docs/issues/32309</link>
+<item>	<title>Clarify check summary max length units</title>
+	<link>https://github.com/github/docs/issues/35252</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app</p>
+<p>https://docs.github.com/en/rest/checks/runs</p>
 <h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>In the "Issuer" section of the JWT header, it says "You can find your app’s ID with the GET /app REST API Endpoint." Unfortunately, you can’t <em>use</em> that endpoint without also using JWT (both /app and /app/installations work). So we need another solution to get that App ID. We must do one of these approaches:
-* Collect it from the GUI
-* Collect it from the /apps/{app_slug} (if the slug is known)
-* Grab it at install time during the POST to app-manifests (if our code supports this)</p>
+<p>When the documentation for the <code>output.summary</code> content describes said field, it says:
+&gt; The summary of the check run. This parameter supports Markdown. Maximum length: 65535 characters.</p>
+<p>The issue here comes when we used quite a few emojis in the output, our internal checks where checking character length of the output, which reported less than the maximum, but when trying to submit it, we got the error:</p>
+<pre><code>Response: {\&quot;message\&quot;:\&quot;Validation Failed\&quot;,\&quot;errors\&quot;:[{\&quot;resource\&quot;:\&quot;CheckRun\&quot;,\&quot;code\&quot;:\&quot;custom\&quot;,\&quot;field\&quot;:\&quot;summary\&quot;,\&quot;message\&quot;:\&quot;summary exceeds a maximum bytesize of 65535\&quot;}],\&quot;documentation_url\&quot;:\&quot;https://docs.github.com/rest/checks/runs#create-a-check-run\&quot;,\&quot;status\&quot;:\&quot;422\&quot;}</code></pre>
+<p>So it seems like the actual check is done in bytes, not characters</p>
 <h3 id="additional-information">Additional information</h3>
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>Info on caching in .NET is outdated</title>
-	<link>https://github.com/github/docs/issues/32098</link>
+<item>	<title>Misleading examples for `github.ref`</title>
+	<link>https://github.com/github/docs/issues/35215</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net</p>
+<p>https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context</p>
 <h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net#caching-dependencies</p>
-<p>The code example given in this section does not yet show the new, more concise syntax for enabling cache, which was added in version 3.2 of the setup-dotnet action.</p>
+<p>The ref given is fully-formed, meaning that for branches the format is <code>refs/heads/&lt;branch_name&gt;</code>, for pull requests it is <code>refs/pull/&lt;pr_number&gt;/merge</code>, and for tags it is <code>refs/tags/&lt;tag_name&gt;</code>. For example, <code>refs/heads/feature-branch-1</code>.</p>
 <h3 id="additional-information">Additional information</h3>
-<p>Relevant links with documentation for the new syntax:
-<a href="https://github.com/actions/setup-dotnet/releases/tag/v3.2.0">v3.2 release</a>
-<a href="https://github.com/actions/setup-dotnet?tab=readme-ov-file#caching-nuget-packages">setup-dotnet readme</a></p></pre> ]]></description>
+<p>Surely <code>github.ref</code> is not <code>refs/pull/&lt;pr_number&gt;/merge</code> for an outstanding pull request.</p>
+<p>My colleague tripped over reading this bit in https://github.com/canonical/operator/pull/1451</p></pre> ]]></description>
 </item>
 
-<item>	<title>Clarify "PAT" in the userinfo subcomponent when authenticating to repos.</title>
-	<link>https://github.com/github/docs/issues/31718</link>
+<item>	<title>State correct permissions for requesting a reviewer via the API</title>
+	<link>https://github.com/github/docs/issues/35057</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-authentication-to-a-repository</p>
+<p>https://docs.github.com/en/rest/pulls/review-requests?apiVersion=2022-11-28#request-reviewers-for-a-pull-request</p>
 <h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>The purpose of the string "PAT" in the username field when using this method of authentication isn’t very clear.</p>
-<blockquote>
-<p>You can clone the repository with a URL that includes the access token. Replace YOUR-VARIABLE with the name of the environment variable or secret you created.
-<code>git clone https://PAT:$YOUR-VARIABLE@github.com/OWNER/REPO</code></p>
-</blockquote>
-<p>It may be assumed that the username field must be set as "PAT", when it can actually take any value as long as it doesn’t malform the URL.
-There could also be confusion as to where the access token should be inserted.
-Replacing "PAT" with a less ambiguous value like "USERNAME" may be more appropriate.</p>
-<h3 id="additional-information">Additional information</h3></pre> ]]></description>
-</item>
-
-<item>	<title>Add clarity to fromJSON function for expressions in Actions</title>
-	<link>https://github.com/github/docs/issues/31708</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
-</item>
-
-<item>	<title>Delete mentions of `X-GitHub-OTP` from the docs</title>
-	<link>https://github.com/github/docs/issues/31660</link>
-	<description><![CDATA[ <pre><p><strong>See here for the final decision: https://github.com/github/docs/issues/31660#issuecomment-1960457785</strong></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
-</ul>
-<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>Probably <a href="https://github.com/github/docs/blob/4f40b22909f8192b70b557ee69fb46ceedb43b89/content/rest/authentication/authenticating-to-the-rest-api.md">docs/content/rest/authentication/authenticating-to-the-rest-api.md</a> given that it documents <code>X-GitHub-SSO</code> and my <em>guess</em> is that <code>X-GitHub-OTP</code> and <code>X-GitHub-SSO</code> are related.</p>
-<p>But, I don’t know, since I don’t know what it is or does.</p>
-<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>At least a sentence, but up to a whole article explaining what it is/does/how to use it.</p>
+<p>The docs for this request say that the only required permission for this request is <code>pull-requests:write</code>. When I tried to request a review from a team using an app with this permission scope, I got the following error message, which was quite obscure, only vaguely hinting that it might be trying to validate a team slug. <code>\"errorMessage\": \"Validation Failed: \"Could not resolve to a node with the global id of 'BUNCH_OF_RANDOM_CHARACTERS'</code>.</p>
+<p>I fixed this by applying the permission <code>members:read</code> to the GitHub App making the request, and I think it would be helpful to amend the docs to state that this permission is required for the request to succeed. I think it also might be be useful to indicate that the object that has failed to validate is the team slug, if that is the source of the error (which is just an educated guess)</p>
 <h3 id="additional-information">Additional information</h3>
-<p>It’s mentioned twice: https://github.com/search?q=repo%3Agithub%2Fdocs%20GitHub-OTP&amp;type=code and every api response from GitHub includes a reference to it:</p>
-<blockquote>
-<p>access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset</p>
-</blockquote>
-<p>For comparison,
-https://github.com/github/docs/blob/4f40b22909f8192b70b557ee69fb46ceedb43b89/content/rest/authentication/authenticating-to-the-rest-api.md?plain=1#L54</p>
-<blockquote>
-<p>If you receive a <code>403 Forbidden</code> error, you can follow the URL in the <code>X-GitHub-SSO</code> header to authorize your token. The URL expires after one hour. If you requested data that could come from multiple organizations, the API will not return results from the organizations that require SAML SSO. The <code>X-GitHub-SSO</code> header will indicate the ID of the organizations that require SAML SSO authorization of your {% data variables.product.pat_v1 %}. For example: <code>X-GitHub-SSO: partial-results; organizations=21955855,20582480</code>.</p>
-</blockquote></pre> ]]></description>
+<p>Please see the following screenshot</p>
+<p>&lt;img width="589" alt="Screenshot 2024-10-23 at 21 04 41" src="https://github.com/user-attachments/assets/cd6d93dd-319b-41e6-b7c0-256469cebb45"&gt;</p></pre> ]]></description>
 </item>
 
-<item>	<title>Add generic information on how the environment files work for GitHub Action Workflow Commands</title>
-	<link>https://github.com/github/docs/issues/31568</link>
+<item>	<title> Misleading section "Example: Using an action inside a different private repository than the workflow" in "Workflow Syntax"</title>
+	<link>https://github.com/github/docs/issues/34562</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions?ref=jessehouwing.net&amp;tool=powershell#environment-files</p>
+<p>https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#example-using-an-action-inside-a-different-private-repository-than-the-workflow</p>
 <h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>The code samples explain how to use bash or PowerShell to set variables and such, but don’t explain the concept of the environment files very well. There is no need to do this explicitly in Bash or PowerShell, one can do it from msbuild or C# or a node script once you understand how it works.</p>
-<p>I propose to either add a separate page or a paragraph in the "environment files" section, explaining the underlying concept of the <code>$GITHUB_OUTPUT</code> variable containing the file name in which these output variables are stored. And that <code>\"a-b\"&gt;&gt;$GITHUB_OUTPUT</code> basically appends a line to the bottom of that file. And to document that that file needs to be written in utf-8 encoding.</p>
-<p>That way you can easily translate that to C#, or msbuild, or python or java or node or go or anything else. Any tool that runs inside the workflow can interact with the agent in this way.</p>
+<p>The current example explains you <em><strong>must</strong> checkout the private repository and reference the action locally</em>, which also necessitates setting up private access tokens as secrets.</p>
+<p>However, after following <a href="https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-an-internal-repository">Allowing access to components in an internal repository</a>, the regular <code>uses: {owner}/{repo}/{path}@{ref}</code> seems to work just fine.
+This is misleading and should be added as an example, or explained why this easier approach should not be used.</p>
 <h3 id="additional-information">Additional information</h3>
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>explain that even though empty should be a good way to trigger the default, it doesn't</title>
-	<link>https://github.com/github/docs/issues/31513</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+<item>	<title>OIDC examples don't pin external actions (&amp; don't declare them)</title>
+	<link>https://github.com/github/docs/issues/34316</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<ol type="1">
+<li>https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-google-cloud-platform#requesting-the-access-token</li>
+<li>https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token</li>
+<li>https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-azure#requesting-the-access-token</li>
+<li>https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-hashicorp-vault#requesting-the-access-token</li>
+<li>https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-pypi#updating-your-github-actions-workflow</li>
+</ol>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<pre><code>    steps:
+    - id: &#39;auth&#39;
+      name: &#39;Authenticate to GCP&#39;
+      uses: &#39;google-github-actions/auth@v0.3.1&#39;
+      with:</code></pre>
+<p>should pin a hash instead, also the reusable disclaiming 3rdparty usage should be added.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>This is analogous for all the pages mentioned, for both <strong># Requesting</strong> and <strong># Revoking</strong> examples.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Explain how to unset failure code in composite actions</title>
-	<link>https://github.com/github/docs/issues/31356</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+<item>	<title>harmonize permissions required for circleci migrator</title>
+	<link>https://github.com/github/docs/issues/34238</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/migrating-to-github-actions/automated-migrations/migrating-from-circleci-with-github-actions-importer#configuring-credentials</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<blockquote>
+<p>Create a GitHub personal access token (classic). For more information, see "<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic">Managing your personal access tokens</a>."</p>
+<p>Your token must have the <code>workflow</code> scope.</p>
+<p>After creating the token, copy it and save it in a safe location for later use.</p>
+</blockquote>
+<p>https://docs.github.com/en/actions/migrating-to-github-actions/automated-migrations/migrating-from-circleci-with-github-actions-importer#using-environment-variables</p>
+<blockquote>
+<p>GitHub Actions Importer uses the following environment variables to connect to your CircleCI instance:</p>
+<p>GITHUB_ACCESS_TOKEN: The personal access token (classic) used to create pull requests with a converted workflow (requires <code>repo</code> and <code>workflow</code> scopes).</p>
+</blockquote>
+<h3 id="additional-information">Additional information</h3>
+<p>It’s possible these sections aren’t talking about the same thing, but that feels unlikely, and as I’ve tripped on an error that seems related, it feels like a bug.</p></pre> ]]></description>
+</item>
+
+<item>	<title>GraphQL rate limits documentation mentions an unavailable authentication method</title>
+	<link>https://github.com/github/docs/issues/34114</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/graphql/overview/rate-limits-and-node-limits-for-the-graphql-api</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>The article includes the following sentence when detailing primary rate limits for each authentication method:
+&gt; For OAuth apps: 5,000 points per hour, or 10,000 points per hour if the app is owned by a GitHub Enterprise Cloud organization. <strong>This only applies when the app uses their client ID and client secret to request public data</strong>.</p>
+<p>However, <a href="https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28#using-basic-authentication">authentication via client ID + client secret for OAuth apps</a> appears not to be available for the GraphQL API, as a user pointed out in octokit/auth-oauth-app.js#46. I also got the same result when trying via curl.</p>
+<p>If the quoted sentence refers to the aforementioned client ID + client secret basic authentication mechanism (which, to my knowledge, is only available for the REST API), it probably shouldn’t be there.
+If that’s not the case, it’s unclear which authentication method it refers to.</p></pre> ]]></description>
+</item>
+
+<item>	<title>document brand icons for verified actions in the marketplace </title>
+	<link>https://github.com/github/docs/issues/34030</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace
+https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#branding</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<ol type="1">
+<li><a href="https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions#branding">branding</a>
+<ul>
+<li>Update introduction to briefly mention the avatar used by default and explain that you can use <code>branding</code> to override this avatar for actions published from user-owned repositories and for unverified actions published from organization-owned repositories.</li>
+</ul></li>
+<li><a href="https://docs.github.com/en/actions/sharing-automations/creating-actions/publishing-actions-in-github-marketplace#about-badges-in-github-marketplace">About badges in GitHub Marketplace</a>
+<ul>
+<li>Update to explain that verified actions always display the organization avatar.</li>
+<li>Mention that for other actions you can override the default icon by updating the action metadata file and link to <a href="https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions#branding">branding</a></li>
+</ul></li>
+</ol>
+<h3 id="additional-information">Additional information</h3>
+<p>https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#about-badges-in-github-marketplace has pictures that show icons that are obviously not listed in https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#branding but there’s nothing that explains how this works.</p></pre> ]]></description>
+</item>
+
+<item>	<title>`runs.pre` should mention that it doesn't work from local actions or when called from other actions called from local actions</title>
+	<link>https://github.com/github/docs/issues/34029</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://github.com/github/docs/blob/main/content/actions/creating-actions/metadata-syntax-for-github-actions.md#runspre</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p><code>runs.pre</code> should include a paragraph explaining availability caveats.</p>
+<p>It should mention:
+1. <code>pre</code> doesn’t work from local actions
+2. If you create an action that will be used by other actions that might in turn be used by local actions, you’ll trigger warnings in all workflows that use <em>that</em> action.
+3. that better practice involves creating a secondary action containing the <code>pre</code> phase so it can <em>optionally</em> be used at the discretion of consumer actions/workflows.</p>
+<h3 id="additional-information">Additional information</h3>
+<ul>
+<li><span class="citation" data-cites="zijchen">@zijchen</span> opened an issue in https://github.com/actions/typescript-action/issues/564 and referenced this documentation.</li>
+<li><span class="citation" data-cites="ncalteen">@ncalteen</span> struggled to explain the problem to the various people who complained about the confusing behavior.</li>
+</ul>
+<p>Documentation here would have helped since at least <span class="citation" data-cites="zijchen">@zijchen</span> would have known that it wasn’t going to work.</p>
+<p>Documentation here might have also discouraged people from adding <code>pre</code> to actions.</p>
+<p>Instead, the right behavior which should be recommended in resolving this ticket is to provide a <em>second</em> action in the same repository responsible for the <code>pre</code> behavior.</p>
+<p>Thus, instead of <span class="citation" data-cites="MoChilia">@MoChilia</span> in https://github.com/Azure/login/pull/384 changing <code>azure/login</code> to have a <code>pre</code> thing which triggers warnings as noted in https://github.com/actions/runner/issues/3397, <span class="citation" data-cites="MoChilia">@MoChilia</span> could have created <code>azure/login/clear-credentials</code> which does the work that’s currently included in <code>pre</code>. Then users could do:</p>
+<ul>
+<li>uses: azure/login/clear-credentials@…</li>
+<li>uses: azure/login@…</li>
+<li>uses: azure/login@…</li>
+</ul>
+<p>And groups like microsoft/playwright could <code>uses: azure/login@...</code> without triggering dozens of warnings.</p>
+<p>Fwiw. I’m pretty sure I’ve run across other repositories causing similar headaches in the past. It’s really frustrating, and given that it appears some actions authors really do refer to documentation, documentation is the right place to put advice to avoid this problem.</p></pre> ]]></description>
+</item>
+
+<item>	<title>No doc of `on.merge_group.&amp;lt;branches|branches-ignore&amp;gt;`</title>
+	<link>https://github.com/github/docs/issues/32879</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>GitHub Actions <code>merge_group</code> trigger supports <code>branches</code> filter since its <a href="https://github.blog/changelog/2022-08-18-merge-group-webhook-event-and-github-actions-workflow-trigger/">beta release</a> in Aug 2022, but it’s not documented till now.</p>
+<p>I guess the symmetric <code>branches-ignore</code> filter is also supported but didn’t check it myself.</p>
+<p>One option is to extend current section <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onpull_requestpull_request_targetbranchesbranches-ignore"><code>on.&lt;pull_request|pull_request_target&gt;.&lt;branches|branches-ignore&gt;</code></a> to cover <code>merge_group</code> and taking care of old anchor name redirection. Or add a separate <code>on.merge_group.&lt;branches|branches-ignore&gt;</code> section.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>Relevant GitHub Blogs</p>
+<ul>
+<li>Beta https://github.blog/changelog/2022-08-18-merge-group-webhook-event-and-github-actions-workflow-trigger/</li>
+<li>Public beta https://github.blog/changelog/2023-04-19-pull-request-merge-queue-public-beta-api-support-and-recent-fixes/</li>
+<li>Generally available https://github.blog/changelog/2023-07-12-pull-request-merge-queue-is-now-generally-available/</li>
+</ul>
+<p>Related
+- https://github.com/actions/languageservices/pull/12
+- https://github.com/actions/languageservices/issues/18
+- Path filtering does not work for merge_group triggers https://github.com/orgs/community/discussions/45899</p></pre> ]]></description>
+</item>
+
+<item>	<title>Clarify `How the permissions are calculated for a workflow job`</title>
+	<link>https://github.com/github/docs/issues/32398</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/security-guides/automatic-token-authentication#how-the-permissions-are-calculated-for-a-workflow-job</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<blockquote>
+<p>Finally,
+if the workflow was triggered by a pull request from a forked repository,
+and the Send write tokens to workflows from pull requests setting is not selected,
+the permissions are adjusted to change any write permissions to read only.</p>
+</blockquote>
+<p>Should be changed to say clarify that if the workflow was triggered by a pull request and the job event is <code>pull_request_target</code> then write permissions will not be changed to read only.</p>
+<p>I’m still recovering from a concussion, but here’s my first attempt at fixing this text:</p>
+<blockquote>
+<p>Finally,
+if the workflow was triggered for the <code>pull_request</code> event (and not the <code>pull_request_target</code> event) by a pull request from a forked repository,
+and the Send write tokens to workflows from pull requests setting is not selected,
+the permissions are adjusted to change any write permissions to read only.</p>
+</blockquote>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
+</item>
+
+<item>	<title>More sophisticated example for `hashFiles` function</title>
+	<link>https://github.com/github/docs/issues/32305</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/learn-github-actions/expressions#hashfiles</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>I think it’d be beneficial if the <a href="https://docs.github.com/en/actions/learn-github-actions/expressions#hashfiles"><code>hashFiles</code></a> function showed slightly more sophisticated examples.</p>
+<p>For example, what if I want to invalidate the cache any time <code>.rs</code> files at the top level of the <code>src/</code> directory change?</p>
+<p>I.e., I’d like to invalidate the cache if <code>src/main.rs</code> or <code>src/constants.rs</code> change, but not if anything in <code>src/misc/</code> changes.</p>
+<pre><code>src/
+├── constants.rs
+├── main.rs
+└── misc
+    ├── main.rs</code></pre>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
+</item>
+
+<item>	<title>Avoid using the three-dot and two-dot terminology in realtion to git diff</title>
+	<link>https://github.com/github/docs/issues/32224</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests#three-dot-and-two-dot-git-diff-comparisons</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>The use of A…B and A..B when using <code>git diff</code> is not recommended by the developers of git, since this terminology refers to ranges, and <code>git diff</code> doesn’t work with ranges, but works with endpoints.</p>
+<p>What makes this use even more confusing is that <code>git diff A..B</code> compares A and B, whereas <code>git log A..B</code> compares merge base of A and B, with B, and vice versa, <code>git diff A...B</code> compares merge base of A and B, with B, whereas <code>git log A...B</code> compares A and B.</p>
+<p><a href="https://stackoverflow.com/a/71741007/9565106">This answer</a> on stackoverflow explains this issue better than me, and <a href="https://lore.kernel.org/git/CAEW0o+gYqWT5u-Tf8aDoMgXaf36Mb-XOApLNs4D+GMVLvsOjxg@mail.gmail.com/T/">quotes</a> the developers of git.</p>
+<p>I suggest replacing the use of "three-dot git diff" with <code>git diff --merge-base base-branch topic-branch</code>, and "two-dot git diff" <code>git diff base-branch topic-branch</code>.</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p>
+<hr />
+<p><em>Added by a maintainer</em></p>
+<h2 id="content-changes-suggested-to-resolve-this-issue">Content changes suggested to resolve this issue</h2>
+<p>https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests#three-dot-and-two-dot-git-diff-comparisons</p>
+<p>I think the best solution is to update the introductions to the two sections "Three-dot Git diff comparison" and "Two-dot diff comparison" to include the definitions that you’ve included in the issue summary. That is:</p>
+<p>In the "Three-dot Git diff comparison" section</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Explain that what we’re referring to as a three-dot git comparison is equivalent to: git diff –merge-base base-branch topic-branch</label></li>
+</ul>
+<p>In the "Two-dot diff comparison" section</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Explain that what we’re referring to as a two-dot git comparison is equivalent to: git diff base-branch topic-branch</label></li>
+</ul>
+<p>Any larger changes would need to wait on changes to the user interface.</p></pre> ]]></description>
+</item>
+
+<item>	<title>Fix PowerShell instructions for GitHub Copilot CLI</title>
+	<link>https://github.com/github/docs/issues/32189</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Currently these instructions do not clarify which versions of PowerShell the premade Copilot aliases are compatible with - it looks like the output of the <code>gh copilot alias</code> command only works for PowerShell 7+, not Windows PowerShell.</p>
+<p>It seems like it would make sense to do one of the following:</p>
+<ul>
+<li>Rewrite the output of the <code>gh copilot alias -- pwsh</code> command</li>
+<li>Add a <code>gh copilot alias -- powershell</code> command</li>
+<li>Explain in the documentation that this only works for PowerShell 7+.</li>
+</ul>
+<p>The expected outcome of this is that it would help people avoid confusion and annoyance.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>It’s documentation - it is always reproducible, and everyone is effected.</p></pre> ]]></description>
+</item>
+
+<item>	<title>document composite action `steps[*].continue-on-error`</title>
+	<link>https://github.com/github/docs/issues/32097</link>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Add documentation for <code>continue-on-error</code></p>
+<h3 id="additional-information">Additional information</h3>
+<p>As noted in https://github.com/github/docs/issues/31356#issuecomment-1949936626, it’s a thing.</p></pre> ]]></description>
 </item>
 
 <item>	<title>Please provide an example on how to save and load docker images to/from cache</title>
 	<link>https://github.com/github/docs/issues/31230</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows</p>
@@ -186,29 +356,11 @@ https://github.com/github/docs/blob/4f40b22909f8192b70b557ee69fb46ceedb43b89/con
 <p>We can’t write the YAML necessary to use cache with docker.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Contradictory info on `$GITHUB_OUTPUT`</title>
-	<link>https://github.com/github/docs/issues/31211</link>
-	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
-</ul>
-<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p><a href="https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs">Defining outputs for jobs</a> (<a href="https://github.com/github/docs/blob/66af710ebd377e0fa0bfb7f6e8acf8747231e4aa/data/reusables/actions/jobs/section-defining-outputs-for-jobs.md">source</a>) and <a href="https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables">Default environment variables</a> (<a href="https://github.com/github/docs/blob/main/content/actions/learn-github-actions/variables.md">source</a>).</p>
-<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>The note in this line:
-https://github.com/github/docs/blob/66af710ebd377e0fa0bfb7f6e8acf8747231e4aa/data/reusables/actions/jobs/section-defining-outputs-for-jobs.md?plain=1#L11</p>
-<p>appears to contradict this entry in the table:
-https://github.com/github/docs/blob/66af710ebd377e0fa0bfb7f6e8acf8747231e4aa/content/actions/learn-github-actions/variables.md?plain=1#L316</p>
-<p>Is the value of <code>$GITHUB_OUTPUT</code> shared between all steps, or unique to each step?</p>
-<h3 id="docs-plan">Docs Plan</h3>
-<p>Outlined in <a href="https://github.com/github/docs/issues/31211#issuecomment-1928488728">this comment</a>.</p></pre> ]]></description>
-</item>
-
 <item>	<title>Missing examples in "Authenticating with a GitHub App on behalf of a user"</title>
 	<link>https://github.com/github/docs/issues/31006</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li><label><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></label></li>
 </ul>
 <h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <ul>
@@ -224,87 +376,162 @@ https://github.com/github/docs/blob/66af710ebd377e0fa0bfb7f6e8acf8747231e4aa/con
 <p>The previous page, "Authenticating as a GitHub App installation", has examples on how to do it with both cURL and Octokit.js.</p></pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Make JWT examples more practical</title>
-	<link>https://github.com/github/docs/issues/30766</link>
-	<description><![CDATA[ <pre><h3 id="is-this-issue-for-a-product-update-or-release-that-is-not-yet-available-to-customers">Is this issue for a product update or release that is not yet available to customers?</h3>
-<p>No? Then please continue. Thank you!</p>
-<h3 id="describe-the-desired-documentation-updates-and-the-problem-they-solve-for-customers.">Describe the desired documentation updates and the problem they solve for customers.</h3>
-<p>We should make the examples in <a href="https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app">Generating a JSON Web Token (JWT) for a GitHub App</a> more practical. Instead of printing the output, we should show how the generated token can be used in an API request.</p>
-<h3 id="which-existing-articles-if-any-are-affected">Which existing articles, if any, are affected?</h3>
-<p><a href="https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app">Generating a JSON Web Token (JWT) for a GitHub App</a></p>
-<h3 id="who-does-this-affect">Who does this affect?</h3>
-<p>GitHub App developers</p>
-<h3 id="what-is-the-impact-to-users">What is the impact to users?</h3>
-<p>easier time building a GitHub App</p>
-<h3 id="we-welcome-contributions-are-you-able-to-help">We welcome contributions, are you able to help?</h3>
-<p>docs-team or OS contributors</p></pre> ]]></description>
+<item>	<title>[Bug]: ASCII art for empty contribution shows grid filled with all high-level blocks</title>
+	<link>https://github.com/github/gh-skyline/issues/50</link>
+	<description><![CDATA[ <pre><h3 id="github-cli-version">GitHub CLI Version</h3>
+<p>2.63.2</p>
+<h3 id="gh-skyline-version">gh-skyline Version</h3>
+<p>0.0.4</p>
+<h3 id="what-operating-system-are-you-seeing-the-problem-on">What Operating System are you seeing the problem on?</h3>
+<p>Linux</p>
+<h3 id="what-happened">What happened?</h3>
+<p>Running the extension for an empty contribution graph gives a grid filled with all high-level blocks.
+I ran it with <code>-u chrisreddington</code> and <code>-y 2013</code>.</p>
+<figure>
+<img src="https://github.com/user-attachments/assets/55acf7f1-57a2-4873-86f4-7ab4978f9c6d" alt="image" />
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Running with <code>-f</code> however outputs blank blocks.
+<img src="https://github.com/user-attachments/assets/553f2465-1cf1-47d9-99c1-c14dd2a6602a" alt="image" /></p>
+<p>Is that the expected behaviour or a bug?</p>
+<p>PS: I ran it on Codespaces</p></pre> ]]></description>
 </item>
 
-<item>	<title>`reportingDescriptor` `name` should mention pascal style constraint</title>
-	<link>https://github.com/github/docs/issues/20872</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
-</item>
-
-<item>	<title>Provide example of using an output to define two matrixes</title>
-	<link>https://github.com/github/docs/issues/17748</link>
-	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<item>	<title>Create Multi-Part Model</title>
+	<link>https://github.com/github/gh-skyline/issues/43</link>
+	<description><![CDATA[ <pre><h3 id="description">Description</h3>
+<p>The created stl file is currently a single body. If the body would be instead made up of multiple parts it would make it possible to create much more compelling multi color prints of our skylines.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>create multi-part body</li>
+<li>Skyline should be a body</li>
+<li>Base should be a body</li>
+<li>Logo,name and year(s) should be a body</li>
 </ul>
-<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
-<p>https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#example-using-contexts-to-create-matrices</p>
-<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
-<p>Provide an example of using an output for two matrixes.</p>
-<p>Often people will want to define a nontrivial matrix and then realize that they want to use it for more than one job and know that they don’t want to copy and paste the definition because that’s brittle. But they won’t know how to share the definition for use by more than one matrix job.</p>
-<h3 id="additional-information">Additional information</h3>
-<p>This question comes up often enough, e.g. here:</p>
-<p>https://github.community/t/can-i-share-strategy-matrices-between-multiple-jobs/195827/7</p>
-<p>Sadly, as you can see, people often get/give the wrong answer (no, you can’t). Since it’s definitely possible, and actually fairly easy, but not terribly obvious, it’d be helpful if it were documented.</p>
-<hr />
-<p>[maintainers edit]
-See comments below for content creation ideas.</p></pre> ]]></description>
+<h3 id="definition-of-done">Definition of Done</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />body is made out of multiple parts</label></li>
+</ul>
+<h3 id="additional-notes">Additional Notes</h3>
+<p>It might be even cool/feasible to make every bar in the skyline a single part</p></pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Add instructions for increasing resources for GitHub Enterprise Server instances on Google Cloud Platform</title>
-	<link>https://github.com/github/docs/issues/9240</link>
-	<description><![CDATA[ <pre><p><strong>What feature or product is affected?</strong></p>
-<p>GitHub Enterprise Server.</p>
-<p><strong>What is the new or expected behavior?</strong></p>
-<p>It’d be good to include some advice for increasing hardware resources available to GitHub Enterprise Server instances on Google Cloud Platform.</p>
-<p><strong>How is the old or inaccurate behavior currently documented?</strong></p>
-<p>"<a href="https://docs.github.com/en/enterprise-server/admin/enterprise-management/increasing-cpu-or-memory-resources">Increasing CPU or memory resources</a>" only addresses GitHub Enterprise Server instances hosted on AWS, Azure, KVM, and VMware. It’d be nice to include instructions for increasing resources for instances hosted on Google Cloud Platform, or at least write a blurb at the top of the page with any known limitations or high-level instructions. (We link to this article from the <a href="https://docs.github.com/en/enterprise-server/admin/installation/setting-up-a-github-enterprise-server-instance">various articles on installing GitHub Enterprise Server</a>, so right now, administrators on Google Cloud Platform might end up at this article, but they won’t see any instructions for their hypervisor.)</p>
-<p><strong>Who does this affect?</strong></p>
-<p>Administrators of GitHub Enterprise Server using Google Cloud Platform.</p>
-<p><strong>What is the impact to users?</strong></p>
-<p>Folks might contact support for instructions. Since GitHub doesn’t own Google Cloud Platform, sometimes we then have to point the customer to other documentation, so it’s potentially a frustrating adventure to find the information that you need for upgrading the virtual machine you’re running 😅</p>
-<p><strong>Content design and implementation (for Docs Content team members only)</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th>Item</th>
-<th>Core</th>
-<th>DSP</th>
-<th>Ecosystem/API</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Content design plan</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Short plan linked <a href="https://github.com/github/docs/issues/9240#issuecomment-1759478141">here</a></p></pre> ]]></description>
+<item>	<title>[Feature]: Skip STL generation and the `GitHub Skyline` ascii art text</title>
+	<link>https://github.com/github/gh-skyline/issues/36</link>
+	<description><![CDATA[ <pre><h3 id="description">Description</h3>
+<p>I’d like the ability to generate only the ascii art portion of the skyline without the <code>GitHub Skyline</code> ASCII art and without generating an STL file. Why? I’d like to include the skyline as part of an overall dashboard I’m working on for my terminal setup.</p>
+<h3 id="requirements">Requirements</h3>
+<p>Provide CLI flag (<code>--only-art</code>?) that does the following:
+- Removes the ASCII art for <code>GitHub Skyline</code>
+- Prevents the generation of an STL file on disk.</p>
+<p>I’d like to run something like <code>gh skyline --art-only --year 2023</code> and have</p>
+<pre><code>                                                ╻
+ ╻               ╻      ╻ ╻╻                   ╻░
+ ░  ╻╻  ╻   ╽┃  ╻░╻ ╻   ░ ░░ ╻    ╻    ╻╻╻╻ ╻ ╻░░
+╻░┃╻▒░╻╻░  ╻░░╻╻░░░╻░╻ ╻░ ░░╻░╻  ╻░ ╻╻╻░░░░ ░ ░░░
+░░░░░░░░░  ░░▓░░░░░░░░ ░░ ░░░░░  ░░╻░░░░░░░╻░╻░░░╻╻
+░░░░░▒░░░ ╻░░▒░░░░░░░░╻░░ ░░░░░╻ ░░░░░░░░░░░░░░░░░░╻
+░░░░░▒░░░░░▒░▒░▓░▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</code></pre>
+<p>be the only output. (This is my real skyline from the year 2023 😄)</p>
+<h3 id="definition-of-done">Definition of Done</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />The request is fulfilled</label></li>
+<li><label><input type="checkbox" />Relevant documentation is updated</label></li>
+<li><label><input type="checkbox" />Unit tests are updated/written and passing</label></li>
+</ul>
+<h3 id="additional-notes">Additional Notes</h3></pre> ]]></description>
 </item>
 
-<item>	<title>"Ensure entries are GitHub Orgs" takes a long time to run, surfaces problems unrelated to changes in a given PR</title>
-	<link>https://github.com/github/government.github.com/issues/1265</link>
-	<description><![CDATA[ <pre><ul class="task-list">
-<li><input type="checkbox" />run "Ensure entries are GitHub Orgs" on all entries periodically (weekly?), generate issue or pr if failures occur</li>
-<li><input type="checkbox" />only check changed/added entries in given PR</li>
+<item>	<title>[Feature]: Generate for YTD/last 12 months timeframe</title>
+	<link>https://github.com/github/gh-skyline/issues/33</link>
+	<description><![CDATA[ <pre><h3 id="description">Description</h3>
+<p>My 2024 has been a good year for me, contribution-wise, but 2024 isn’t over! So, there is a gap at the end of my timline. It would be nice to generate my contributions for the last 12 months i.e. <code>gh skyline --ytd</code> maybe.</p>
+<p>I guess the tricky part would be what is generated in the bottom right for the date 🤔 I suppose once you build something like this, there is not reason to not extend to any 12 month timeframe.</p>
+<h3 id="requirements">Requirements</h3>
+<p>Not sure, I don’t know much Go, haha</p>
+<h3 id="definition-of-done">Definition of Done</h3>
+<p>There is some option to generate a skyline for the last 12 months of contributions.</p>
+<h3 id="additional-notes">Additional Notes</h3>
+<p>Probably a good first issue 🙃</p></pre> ]]></description>
+</item>
+
+<item>	<title>[Feature]: Enhance text embossing with grayscale height mapping</title>
+	<link>https://github.com/github/gh-skyline/issues/13</link>
+	<description><![CDATA[ <pre><h1 id="description">Description</h1>
+<p>Currently, the text rendering in <code>gh-skyline</code> uses a binary threshold for pixel values when creating the 3D text geometry. This results in a "hard" embossing effect where pixels are either fully raised or not at all. We can improve the visual quality by using the pixel’s grayscale/whiteness value to determine the embossing height, which would preserve font anti-aliasing in the 3D output.</p>
+<h1 id="requirements">Requirements</h1>
+<ul>
+<li>Modify the text rendering logic to use pixel whiteness values (0-1) to scale embossing height</li>
+<li>Update <code>isPixelActive()</code> to return a float value representing pixel intensity instead of boolean</li>
+<li>Scale the voxel depth based on the pixel intensity value</li>
+<li>Maintain backward compatibility with existing cube generation functions</li>
+<li>Handle edge cases (completely black/white pixels) appropriately</li>
+</ul>
+<h1 id="definition-of-done">Definition of Done</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />Text rendering uses grayscale values to determine embossing height</label></li>
+<li><label><input type="checkbox" />Anti-aliased edges of text are preserved in the 3D output</label></li>
+<li><label><input type="checkbox" checked="" />Documentation is updated to reflect the new behavior</label></li>
+<li><label><input type="checkbox" checked="" />Unit tests cover various pixel intensity scenarios</label></li>
+<li><label><input type="checkbox" />Visual regression tests show improved quality at text edges</label></li>
+</ul>
+<h1 id="additional-notes">Additional Notes</h1>
+<ul>
+<li>Consider adding a configuration option to toggle between binary and grayscale modes</li>
+<li>Pixel intensity calculation should account for RGB channels appropriately</li>
+<li>May need to adjust overall embossing depth to maintain visual balance</li>
+<li>Consider impact on STL file size due to increased geometry complexity</li>
 </ul></pre> ]]></description>
+</item>
+
+<item>	<title>[Feature]: Enhance text placement in relation to edges</title>
+	<link>https://github.com/github/gh-skyline/issues/12</link>
+	<description><![CDATA[ <pre><h1 id="description">Description</h1>
+<p>Currently, the text rendering in <code>gh-skyline</code> places the text a little arbitrarily within the rendered elements. We want to improve this by placing the username and the year at a certain distance from their respective (left and right) edges</p>
+<h1 id="requirements">Requirements</h1>
+<ul>
+<li>Modify the text rendering logic to place the username a specified distance from the left edge.</li>
+<li>Place the year the same specified distance from the right edge.</li>
+<li>Ensure the distance is configurable through the <code>textRenderConfig</code> struct.</li>
+<li>Update any relevant documentation to reflect these changes.</li>
+<li>Write unit tests to verify the new text placement</li>
+</ul>
+<h1 id="definition-of-done">Definition of Done</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" />The username is placed a specified distance from the left edge.</label></li>
+<li><label><input type="checkbox" />The year is placed the same specified distance from the right edge.</label></li>
+<li><label><input type="checkbox" />The distance is configurable via <code>textRenderConfig</code>.</label></li>
+<li><label><input type="checkbox" />Relevant documentation is updated.</label></li>
+<li><label><input type="checkbox" />Unit tests are updated/written and passing.</label></li>
+</ul>
+<h1 id="additional-notes">Additional Notes</h1>
+<ul>
+<li>Follow standard Go conventions and best practices.</li>
+<li>Use clear, descriptive variable and function names.</li>
+<li>Add comments to explain complex logic or non-obvious implementations.</li>
+<li>Include GoDoc comments for all changes.</li>
+</ul>
+<p>This issue is a great opportunity for new contributors to get familiar with the codebase and make a meaningful improvement. If you have any questions, feel free to ask!</p></pre> ]]></description>
+</item>
+
+<item>	<title>show latest version of action in hover tooltip</title>
+	<link>https://github.com/github/vscode-github-actions/issues/326</link>
+	<description><![CDATA[ <pre><p><img width=\"969\" alt=\"image\" src=\"https://github.com/github/vscode-github-actions/assets/41773861/3373372b-a9a7-4359-b8fa-b57977834a3c\"></p>
+<p>like vscode builtin npm package tooltip:</p>
+<p><img width=\"1512\" alt=\"image\" src=\"https://github.com/github/vscode-github-actions/assets/41773861/24aebeca-ed5e-483a-a52b-af606cad3818\"></p></pre> ]]></description>
+</item>
+
+<item>	<title>Actions in different directory than .github\workflows</title>
+	<link>https://github.com/github/vscode-github-actions/issues/325</link>
+	<description><![CDATA[ <pre><h3 id="discussed-in-httpsgithub.comgithubvscode-github-actionsdiscussions207">Discussed in https://github.com/github/vscode-github-actions/discussions/207</h3>
+<div type="discussions-op-text">
+<sup>Originally posted by <strong>MariuszMielcarski</strong> June 1, 2023</sup>
+Hi
+I have noticed that the plugin successfully found my workflows in .githubdirectory - and that works great.
+But I have some reusable actions defined in other directory, and it was not identified as GitHub actions by the plugin.
+Can configure the plugin somehow to add additional directories to track? To have IntelliSense work for my custom actions too.
+</div>
+<p>Wanted to make this an issue as it would also really help out for people like me that run a simple self-hosted Gitea instance, since these workflows are stored in <code>.gitea/workflows</code>. If only there is some setting for the extension that holds an array of workflow paths would be really awesome! Default value would then of course be <code>[\".github/workflows\"]</code> :)</p></pre> ]]></description>
 </item>
 
 <item>	<title>"Context access might be invalid" warning thrown for repository variables and secrets</title>
@@ -322,14 +549,198 @@ Secrets/vars should not throw a "Context access might be invalid" warning.</p>
 Add any other context about the problem here.</p></pre> ]]></description>
 </item>
 
-<item>	<title>[BUG]: Fetching check runs for a commit results in a `FormatException`</title>
-	<link>https://github.com/octokit/dotnet-sdk/issues/39</link>
+<item>	<title>[BUG]: Deleting in a Git Tree Fails When Passing Null or "Null"</title>
+	<link>https://github.com/octokit/dotnet-sdk/issues/120</link>
+	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
+<p>https://docs.github.com/en/rest/git/trees?apiVersion=2022-11-28
+When passing a null - the value is not serialized inside TreesPostRequestBody_tree and an error is thrown that Content or Sha must be passed. If you pass a "null" it throws an error =&gt; sha null is not a valid blob
+We need to be able to pass just a null to delete a blob in a Pull Request (Tree)</p>
+<p>`sha string or null
+The SHA1 checksum ID of the object in the tree. Also called tree.sha. If the value is null then the file will be deleted.</p>
+<p>Note: Use either tree.sha or content to specify the contents of the entry. Using both tree.sha and content will return an error.`</p>
+<h3 id="versions">Versions</h3>
+<p>octokit v.0.0.14
+.net 8</p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[BUG]: The SDK returns a List of String for an issue where the values are null even when the values exist </title>
+	<link>https://github.com/octokit/dotnet-sdk/issues/116</link>
+	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
+<p>I am trying to get the labels from a GitHub issue . I am calling the GetAllIssuesAsync endpoint which returns all issues for a repository. Here each Issue contains the label field which is a type <code>List&lt;string&gt;</code> so I expect it to return a List of string where each string is the name of the label. something like
+string[0] = "bug"
+string[1] = "needs-triage"</p>
+<p>but I am getting a List<string> where the count = # of strings present in the list for that issue but I don’t get the actual string. Each index is null in this list.</p>
+<p>For example calling this api <code>https://api.github.com/repos/microsoftgraph/microsoft-graph-toolkit/issues/3172</code> on the browser I get</p>
+<p>&lt;img width="762" alt="Screenshot 2024-08-27 135242" src="https://github.com/user-attachments/assets/99cd49ad-a202-4696-98ff-bff8893b244c"&gt;</p>
+<p>Here we have two labels.</p>
+<p>when I fetched this issue using kiota it returns</p>
+<p><img width=\"287\" alt=\"issuelabel\" src=\"https://github.com/user-attachments/assets/13a8665d-f241-473b-a609-2d834788dc6c\"></p>
+<p>why is the two index null here?</p>
+<p>After calling the endpoint GetAllIssuesAsync I create an Issue object
+<img width=\"394\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cfeaf3b1-4a31-43a1-b144-e9294d169556\">
+Notice that I am trying to retrieve the labels by calling issue.labels and I expect it to be list<string> with the name of the labels as a string. But it returns a list of the size of the number of strings present in the list but each index is null.</p>
+<h3 id="versions">Versions</h3>
+<p>0.0.24</p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[BUG]: Users[].GetAsync() does not return correct data</title>
+	<link>https://github.com/octokit/dotnet-sdk/issues/87</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>[BUG]: Mutation UpdateProjectV2ItemFieldValue fails with ProjectV2FieldValue has the wrong arguments error</title>
-	<link>https://github.com/octokit/octokit.graphql.net/issues/292</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+<item>	<title>[FEAT]: Deserialize a webhook payload for project v2 item sent by github app event</title>
+	<link>https://github.com/octokit/octokit.graphql.net/issues/324</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
+<p>I can’t figure out how to do this, so I’m assuming it’s not supported.</p>
+<h3 id="sdk-version">SDK Version</h3>
+<p><em>No response</em></p>
+<h3 id="api-version">API Version</h3>
+<p><em>No response</em></p>
+<h3 id="relevant-log-output">Relevant log output</h3>
+<p><em>No response</em></p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[BUG]: The object reference was not set to an object instance.</title>
+	<link>https://github.com/octokit/octokit.net/issues/2971</link>
+	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
+<p>When I create a new Github client, I get this message: The object reference was not set to an object instance.</p>
+<h3 id="versions">Versions</h3>
+<p>Octokit c# .net 13.0.1</p>
+<h3 id="relevant-log-output">Relevant log output</h3>
+<pre class="shell"><code>I created the following code:
+
+private static async Task&lt;Release&gt; GetLatestReleaseVersion()
+{
+    LogMessage(\&quot;Erstelle GitHub-Client und prüfe auf Releases...\&quot;);
+    var client = new GitHubClient(new ProductHeaderValue(\&quot;TestProject\&quot;));
+
+    if (!string.IsNullOrEmpty(GithubToken))
+    {
+        LogMessage(\&quot;Setze GitHub Token.\&quot;);
+        var tokenAuth = new Credentials(GithubToken);
+        client.Credentials = tokenAuth;
+    }
+
+    var rateLimit = await client.RateLimit.GetRateLimits();
+    LogMessage($\&quot;Rate Limit: {rateLimit.Rate.Remaining}/{rateLimit.Rate.Limit}\&quot;);
+
+    LogMessage(\&quot;Versuche, alle Releases abzurufen...\&quot;);
+    var releases = await client.Repository.Release.GetAll(GitHubOwner, GitHubRepo);
+
+    if (releases == null || !releases.Any())
+    {
+        LogMessage(\&quot;Fehler: Keine Releases gefunden.\&quot;);
+        throw new InvalidOperationException(\&quot;Keine Releases gefunden.\&quot;);
+    }
+
+    var latestRelease = releases.FirstOrDefault();
+    if (latestRelease == null)
+    {
+        LogMessage(\&quot;Fehler: Kein Release gefunden.\&quot;);
+        throw new InvalidOperationException(\&quot;Kein Release gefunden.\&quot;);
+    }
+
+    LogMessage($\&quot;Gefundenes Release: {latestRelease.TagName}\&quot;);
+    return latestRelease;
+}</code></pre>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[FEAT]: Create Pull Request Review Comment on File</title>
+	<link>https://github.com/octokit/octokit.net/issues/2970</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
+<p>The current <code>PullRequestReviewComment</code> does not support a comment on a file in general. It only supports commenting on specific lines of a file in a PR review.</p>
+<p>According to https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request it should be possible by setting <code>subject_type</code> to <code>file</code>.</p>
+<p>So the feature request is "Be able to comment on files in a pull request review".</p>
+<h3 id="sdk-version">SDK Version</h3>
+<p><em>No response</em></p>
+<h3 id="api-version">API Version</h3>
+<p><em>No response</em></p>
+<h3 id="relevant-log-output">Relevant log output</h3>
+<p><em>No response</em></p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[FEAT]: Revoke an installation access token</title>
+	<link>https://github.com/octokit/octokit.net/issues/2963</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
+<p>Octokit is missing an API for https://docs.github.com/en/rest/apps/installations?apiVersion=2022-11-28#revoke-an-installation-access-token</p>
+<p>I’d say it should be added here:
+* https://github.com/octokit/octokit.net/blob/main/Octokit/Clients/IGitHubAppInstallationsClient.cs
+* https://github.com/octokit/octokit.net/blob/main/Octokit/Clients/GitHubAppInstallationsClient.cs</p>
+<p>We want to login/logout cleanly similar to https://github.com/actions/create-github-app-token/blob/main/lib/post.js#L31C27-L31C46</p>
+<h3 id="sdk-version">SDK Version</h3>
+<p>Octokit.net 13.0.1</p>
+<h3 id="api-version">API Version</h3>
+<p>REST API 2022-11-28</p>
+<h3 id="relevant-log-output">Relevant log output</h3>
+<p><em>No response</em></p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[BUG]: Downloading release asset stopped working between 8.0.0 and 8.0.1</title>
+	<link>https://github.com/octokit/octokit.net/issues/2959</link>
+	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
+<p>This code example used to work on an older version of Octokit - I have tested versions and it seems the last time it worked was with Octokit.net 8.0.0 - it does not work in 8.0.1. The response is null from 8.0.1 and up.</p>
+<pre><code>public async Task&lt;Stream&gt; GetAssetStreamAsync()
+{
+    var client = new GitHubClient(new ProductHeaderValue(\&quot;owner\&quot;)) { Credentials = new Credentials(token: \&quot;token\&quot;) };
+    var responseRaw = await client.Connection.Get&lt;byte[]&gt;(new Uri(\&quot;asset-url\&quot;), new Dictionary&lt;string, string&gt;(), \&quot;application/octet-stream\&quot;);
+
+    return new MemoryStream(responseRaw.Body);
+}</code></pre>
+<h3 id="versions">Versions</h3>
+<p>Octokit.net 8.0.1</p>
+<h3 id="relevant-log-output">Relevant log output</h3>
+<p><em>No response</em></p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
+</item>
+
+<item>	<title>[MAINT]: Make library Timeout's actually useful</title>
+	<link>https://github.com/octokit/octokit.net/issues/2956</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
+<p>At the moment the timeout support is confusing and inadequate. Take the following method for example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> async Task <span class="fu">UploadFileAsAsset</span><span class="op">(</span>GitHubClient client<span class="op">,</span> Release release<span class="op">,</span> <span class="dt">string</span> filePath<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">using</span> <span class="dt">var</span> stream <span class="op">=</span> File<span class="op">.</span><span class="fu">OpenRead</span><span class="op">(</span>filePath<span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">var</span> data <span class="op">=</span> <span class="kw">new</span> <span class="fu">ReleaseAssetUpload</span><span class="op">(</span>Path<span class="op">.</span><span class="fu">GetFileName</span><span class="op">(</span>filePath<span class="op">),</span> \<span class="st">&quot;application/octet-stream</span><span class="sc">\&quot;</span><span class="st">, stream, TimeSpan.FromMinutes(60));</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    await client<span class="op">.</span><span class="fu">Repository</span><span class="op">.</span><span class="fu">Release</span><span class="op">.</span><span class="fu">UploadAsset</span><span class="op">(</span>release<span class="op">,</span> data<span class="op">,</span> CancellationToken<span class="op">.</span><span class="fu">None</span><span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>You might think that this request will timeout after 60 minutes. Actually, this request will timeout after 100 seconds which is default connection timeout used by <code>HttpClient</code>. The <code>ReleaseAssetUpload.Timeout</code> value you see being set above will create a CancellationToken which will cancel the request prematurely (see <a href="https://github.com/octokit/octokit.net/blob/main/Octokit/Http/HttpClientAdapter.cs#L61">HttpClientAdapter.cs#L61</a>) but it does not override the HttpClient timeout. And 100 seconds not enough time to upload a larger asset.</p>
+<p>It is possible to override the HttpClient timeout with <code>client.SetRequestTimeout(...)</code>, however this now applies to every request. If I <code>SetRequestTimeout</code> to 60 minutes, even a simple "list releases" or "create release" request will be allowed to run for 60 minutes before timing out! That is not appropriate.</p>
+<p>To add insult to injury, if I set the HttpClient request timeout to something large, I can’t even specify the cancellation-token style timeout on the short-lived requests so they will timeout in a reasonable timeframe. (because most Octokit requests do not expose the Timeout property)</p>
+<p>My options currently are:
+- <del>Ignore the <code>ReleaseAssetUpload.Timeout</code> (because it’s useless), and constantly call <code>SetRequestTimeout</code> before each request with a reasonable time.</del> (can’t do this because apparently SetRequestTimeout can not be updated after the first request)
+- <del>Set both the <code>SetRequestTimeout</code> and <code>ReleaseAssetUpload.Timeout</code> to comically large values, and create my own cancellation token’s for every request with reasonable values.</del> (can’t do this, because most requests don’t even allow you to supply a cancellation token)</p>
+<p>However, in both of the above options it’s clear that the built-in timeout logic in Octokit is not fit for purpose.</p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
+</ul></pre> ]]></description>
 </item>
 
 <item>	<title>[BUG]: Accessing Pull Requests from all GHE Org Repos (internal included)</title>
@@ -349,302 +760,7 @@ Add any other context about the problem here.</p></pre> ]]></description>
 <pre class="shell"><code>Octokit.NotFoundException: &#39;Not Found&#39;</code></pre>
 <h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: Int32 overflow for Github object ids</title>
-	<link>https://github.com/octokit/octokit.net/issues/2893</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: Timeout getting multiple renamed repositories when running in NET Framework</title>
-	<link>https://github.com/octokit/octokit.net/issues/2892</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p>When the following code is built for and run with .NET Framework (target framework net472), the second call to <code>GitHubClient.Repository.Get</code> fails after 100 seconds with a <code>TaskCanceledException</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c#"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> Octokit<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> gitHubClient <span class="op">=</span> <span class="kw">new</span> <span class="fu">GitHubClient</span><span class="op">(</span><span class="kw">new</span> <span class="fu">ProductHeaderValue</span><span class="op">(</span>\<span class="st">&quot;TimeoutRepro</span><span class="sc">\&quot;</span><span class="st">));</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> renamedRepo1 <span class="op">=</span> await gitHubClient<span class="op">.</span><span class="fu">Repository</span><span class="op">.</span><span class="fu">Get</span><span class="op">(</span>\<span class="st">&quot;moq</span><span class="sc">\&quot;</span><span class="st">, </span><span class="sc">\&quot;</span><span class="st">moq</span><span class="sc">\&quot;</span><span class="st">);</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> renamedRepo2 <span class="op">=</span> await gitHubClient<span class="op">.</span><span class="fu">Repository</span><span class="op">.</span><span class="fu">Get</span><span class="op">(</span>\<span class="st">&quot;sandermvanvliet</span><span class="sc">\&quot;</span><span class="st">, </span><span class="sc">\&quot;</span><span class="st">SerilogSinksInMemory</span><span class="sc">\&quot;</span><span class="st">);</span></span></code></pre></div>
-<p>Further observations:
-- When changing the order in which the repositories are queried, it is always the second one that fails.
-- The failure does not happen with repositories that have not been renamed.
-- The failure does not happen when targeting and running with NET 8.0</p>
-<p>This seems to be the same issue as described in #1396 but now it only reproduces with .NET Framework.</p>
-<h3 id="versions">Versions</h3>
-<p>Octokit.net 10.0.0</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>octokit is missing NuGet package README file</title>
-	<link>https://github.com/octokit/octokit.net/issues/2883</link>
-	<description><![CDATA[ <pre><p>We’ve noticed that your package on NuGet.org is missing a README file.</p>
-<p>## Why READMEs are Important
-Our customer research indicates that one of the top problems that package consumers face is insufficient package documentation such as README files. Adding a README file to your package will help users quickly understand what the package is and what it does. Since your README will be the first impression for users when they view your package on NuGet.org, it is crucial for authors to write and include high-quality READMEs for their packages.</p>
-<p>## Get Started with READMEs</p>
-<p>### How to Add a README
-If you’re new to NuGet READMEs, follow guidance on <a href="https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/">how to add one to your package</a>.</p>
-<p>### How to write high quality of READMEs
-Follow <a href="https://devblogs.microsoft.com/nuget/write-a-high-quality-readme-for-nuget-packages/">a blog post</a> with README best practices and a template file to help you get started.</p>
-<p>## We Value Your Feedback
-We value your feedback. If you encounter any issues or have suggestions, please reply to this issue.</p>
-<p>Thank you for your contribution to the NuGet community.</p></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Download Release archive files</title>
-	<link>https://github.com/octokit/octokit.net/issues/2879</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>I understand that this issue is in a way a duplicate of #2742 but the way it’s presented there is… far from perfect.</p>
-<p>Octokit.js has a way to access the release archives (https://github.com/octokit/octokit.js/issues/2369#issuecomment-1648744759) so it would be nice to also have such feature in octokit.net. The workaround with a separate HttpClient presented in #2742 is in my opinion against the purpose of octokit.net (not to mention that it’s generally low quality, it doesn’t take socket exhaustion into account - and would it even work if it doesn’t include the user agent header? And I’m not going to comment on the ChatGPT-generated garbage).</p>
-<p>A way to grab the buffer and download the zip/tar ball should be exposed in octokit.net without the consumers being forced to apply weird hacks.</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p>Octokit 9.1.2</p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: ValidateLINQPadSamples and TearDown Errors</title>
-	<link>https://github.com/octokit/octokit.net/issues/2875</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<figure>
-<img src="https://github.com/octokit/octokit.net/assets/11604664/d903596b-3880-4112-b216-22e4bf15e63f" alt="image" />
-<figcaption aria-hidden="true">image</figcaption>
-</figure>
-<h3 id="versions">Versions</h3>
-<p>Octokit.net v9.1.2</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<pre class="shell"><code>========================================
-ValidateLINQPadSamples
-========================================
-Executing sample 01-introducing-octokit.linq...
-C:\Users\wes\AppData\Local\Temp	mp7DE5.tmp(9,36): error CS0012: The type &#39;ProductHeaderValue&#39; is defined in an assembly that is not referenced. You must add a reference to assembly &#39;System.Net.Http, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&#39;.
-An error occurred when executing task &#39;ValidateLINQPadSamples&#39;.
-
-----------------------------------------
-TearDown
-----------------------------------------
-Error: Execution of sample 01-introducing-octokit.linq failed</code></pre>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[MAINT]: Clean Up All ~1132 `xUnit` Build Error Warnings</title>
-	<link>https://github.com/octokit/octokit.net/issues/2872</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Private Repo access ( get the details of the issues , Code &amp; Bugs ) in C#</title>
-	<link>https://github.com/octokit/octokit.net/issues/2869</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>How can I download a private repo ?</p>
-<p>Just to be clear, The token I am using is correct, I can access repo info, downloading public assets file is OK, but downloading any private Repo or get the issues does not work. I guess because it’s not got permissions for the WebClient download?</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p><em>No response</em></p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Allow Nulls to be Passed to `BranchProtectionRequiredReviewsDismissalRestrictionsUpdate Constructor`</title>
-	<link>https://github.com/octokit/octokit.net/issues/2850</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Is there a reason <code>BranchProtectionTeamCollection teams</code> and <code>BranchProtectionUserCollection users</code> are not nullable?</p>
-<p>Because I noticed when a bool is passed as false to the <code>BranchProtectionRequiredReviewsDismissalRestrictionsUpdate</code> constructor both <code>BranchProtectionTeamCollection teams</code> and <code>BranchProtectionUserCollection users</code> are simple set to null.</p>
-<p>Wouldn’t it just be easier to allow those properties to be nullable?</p>
-<figure>
-<img src="https://github.com/octokit/octokit.net/assets/131033769/c105fd28-9c37-4415-8b71-2b8aec173aa4" alt="image" />
-<figcaption aria-hidden="true">image</figcaption>
-</figure>
-<h3 id="sdk-version">SDK Version</h3>
-<p>Octokit.net v9.1.0</p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: Weird exception </title>
-	<link>https://github.com/octokit/octokit.net/issues/2848</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Move all types to Octokit namespace</title>
-	<link>https://github.com/octokit/octokit.net/issues/2845</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Could you move all types to the <code>Octokit</code> namespace please ?</p>
-<p>Today I realized (the hard way) that <code>Artifact</code> and <code>ArtifactWorkflowRun</code> types have no namespace, and it messed up my work since we also have a type named <code>Artifact</code>. I recently updated from 7.1 to 9.0 and apparently that’s the reason, the type <code>Artifact</code> was added in commit 958bc5f1f87cd97cd8520ac74f958c2df12903b3 and broke our code.</p>
-<p>While you are at it, please make sure there are no other types without namespace.</p>
-<p>Thanks.</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p>Octokit.net v9.0.0</p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: OOM Downloading large Workflow Artifacts</title>
-	<link>https://github.com/octokit/octokit.net/issues/2835</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p>With the release of v4 of https://github.com/actions/upload-artifact, backend changes has been implemented which seems to cause issues when trying to download artifacts.</p>
-<p>When trying to download a large (&gt;1GiB) artifact using the following code:</p>
-<pre><code>var sm = await client.Actions.Artifacts.DownloadArtifact(owner, reponame, id, \&quot;zip\&quot;);
-using (var fs = File.OpenWrite(\&quot;C:\temp\artifact.zip\&quot;))
-{
- await sm.CopyToAsync(fs);
-}</code></pre>
-<p>We get OOM:</p>
-<pre><code>System.Net.Http.HttpRequestException: Error while copying content to a stream. ---&gt; System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
-   at System.Net.ConnectStream.EndRead(IAsyncResult asyncResult)
-   at System.Net.Http.HttpClientHandler.WebExceptionWrapperStream.EndRead(IAsyncResult asyncResult)
-   at System.Net.Http.StreamToStreamCopy.BufferReadCallback(IAsyncResult ar)
-   --- End of inner exception stack trace ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Octokit.Internal.HttpClientAdapter.&lt;BuildResponse&gt;d__5.MoveNext() in /_/Octokit/Http/HttpClientAdapter.cs:line 98
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Octokit.Internal.HttpClientAdapter.&lt;Send&gt;d__3.MoveNext() in /_/Octokit/Http/HttpClientAdapter.cs:line 52
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Octokit.Connection.&lt;RunRequest&gt;d__68.MoveNext() in /_/Octokit/Http/Connection.cs:line 755
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Octokit.Connection.&lt;GetRawStream&gt;d__65.MoveNext() in /_/Octokit/Http/Connection.cs:line 724
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Octokit.ApiConnection.&lt;GetRawStream&gt;d__13.MoveNext() in /_/Octokit/Http/ApiConnection.cs:line 148
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)</code></pre>
-<p>A smaller (~200 MiB) artifacts seems to work fine. As a sidenote, we run this in a 32-bit process, so the OOM happens sooner there I would assume.</p>
-<p>A noticeable change in behaviour is that before v4, the <code>DownloadArtifact(...)</code> call would return reasonably quickly, and the processing would then be handled by the <code>CopyToAsync</code>. After v4, <code>DownloadArtifact(...)</code> only returns once all of the data has been dowloaded (in the case of smaller artifacts) or OOMs.</p>
-<h3 id="versions">Versions</h3>
-<p>Octokit 9.0.0</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: A JSON web token could not be decoded</title>
-	<link>https://github.com/octokit/octokit.net/issues/2833</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: add support for custom properties apis</title>
-	<link>https://github.com/octokit/octokit.net/issues/2832</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>https://docs.github.com/en/rest/orgs/custom-properties?apiVersion=2022-11-28</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p><em>No response</em></p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Support Dependency Graph APIs</title>
-	<link>https://github.com/octokit/octokit.net/issues/2825</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>There are several APIs under the Dependency Graph section that don’t look to be implemented in octokit.net:</p>
-<ul>
-<li><a href="https://docs.github.com/en/rest/dependency-graph/dependency-review?apiVersion=2022-11-28">Dependency review</a></li>
-<li><a href="https://docs.github.com/en/rest/dependency-graph/dependency-submission?apiVersion=2022-11-28">Dependency submission</a></li>
-<li><a href="https://docs.github.com/en/rest/dependency-graph/sboms?apiVersion=2022-11-28">Software bill of materials</a></li>
-</ul>
-<p>It would be nice if these APIs were supported.</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p><em>No response</em></p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Add deployment_protection_rule approval for GithubClient</title>
-	<link>https://github.com/octokit/octokit.net/issues/2823</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Hello,
-As far as i researched, the GithubClient does not have the functionality to approve deployment_protection_rule. (I may be mistaken).
-I wonder if it’s possible to add it?</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p>octokit.net 9.*</p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>Need an way to get the files attached in the issues</title>
-	<link>https://github.com/octokit/octokit.net/issues/2812</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Issue class need an way to get all the files attached in the issues body and issue comments section.</p>
-<p>In latest getting the Urls of the attached files.</p>
-<h3 id="version">Version</h3>
-<p>Octokit 9.0.0</p></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Expand Environments client for secrets and variables</title>
-	<link>https://github.com/octokit/octokit.net/issues/2752</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>On the Environments client it should expose the ability for retrieving the Secrets and Variables for each Environment</p>
-<h3 id="sdk-version">SDK Version</h3>
-<p>Octokit.net 7.0.1</p>
-<h3 id="api-version">API Version</h3>
-<p><em>No response</em></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
 </ul></pre> ]]></description>
 </item>
 
@@ -663,11 +779,9 @@ So I am getting this exception "API rate limit exceeded for User ID"</p>
 <p><em>No response</em></p>
 <h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
 </ul></pre> ]]></description>
 </item>
-
-
 
 <item>	<title>[DOCS]: Full class documentation</title>
 	<link>https://github.com/octokit/octokit.net/issues/2699</link>
@@ -678,84 +792,18 @@ So I am getting this exception "API rate limit exceeded for User ID"</p>
 <p><a href="https://dotnet.github.io/docfx/">DocFX</a> is an <a href="https://github.com/dotnet/docfx">open source</a> technical documentation site generator by the dotnet organization. This may be the most straightforward and easiest solution. Integration with the existing ReadTheDocs site may be able to be done with <a href="https://github.com/bsimser/docfx-readthedocs">this template</a>, although I don’t have any experience with these techs..</p></pre> ]]></description>
 </item>
 
-<item>	<title>Variables API</title>
-	<link>https://github.com/octokit/octokit.net/pull/2686</link>
-	<description><![CDATA[ <pre><p>This is a draft of the Variable API implementation.
-It lacks the environment part, but it’s not required for my case, so if anyone want a jumpstart, this draft could be used to complete the implementation!</p></pre> ]]></description>
-</item>
-
-<item>	<title>Implement protection setting of bypass_pull_request_allowances</title>
-	<link>https://github.com/octokit/octokit.net/issues/2595</link>
-	<description><![CDATA[ <pre><p>When implementing tools and automating processes, especially in sizable organizations, it’s important to be capable of setting as many of properties of a repo as possible.</p>
-<p>Please let me know if I can provide additional information.</p>
-<p>thanks for the consideration.</p></pre> ]]></description>
-</item>
-
-<item>	<title>If a folder or file name contains "#", the content cannot be retrieved.</title>
-	<link>https://github.com/octokit/octokit.net/issues/2587</link>
-	<description><![CDATA[ <pre><p>In the following folder structure of GitHub, I tried to get the contents under #aaa1 by specifying "AAA/#aaa1" in the <code>path</code> of <code>Client.GetAllContents()</code>.</p>
-<pre><code>GitHub
-├AAA
-│#aaa1
-│└││aaa_xxx.xlsx
-│#aaa2
-└#aaa3
-└BBB
-  └#bbb1
-    └│bbb_xxx.xlsx</code></pre>
-<p>I thought I could get #aaa_xxx.xlsx, but #aaa1, #aaa2, and #aaa3 were got.
-This bug occurs only when the folder or file name contains #.</p></pre> ]]></description>
-</item>
-
-<item>	<title>[DOCS] Update all links to developer.github.com in docs and code comments to the more accurate docs.github.com</title>
-	<link>https://github.com/octokit/octokit.net/issues/2474</link>
-	<description><![CDATA[ <pre><p>It’s been a while since we’ve updated the documentation for octokit.net (*.md). The hostname for the docs site on GitHub has since changed from <code>developer.github.com</code> to <code>docs.github.com</code> so all of the references need to change given the redirects might not always be there and might not currently be accurate.</p>
-<p>Things to watch out for:
-- This also includes the v3 URI segment - in most cases that can be removed for docs
-- There are close to 4000 lines that have a string segment of <code>developer.github.com/v3</code> - most of them currently redirect property but we’ll need to be more cautious around the more complex URLs
-- Make sure to sanitize out localization - en, <code>https://docs.github.com/en/rest/issues</code> should be <code>https://docs.github.com/rest/issues</code> etc… the docs site should handle all of that</p></pre> ]]></description>
-</item>
-
-<item>	<title>Update documentation detailing how to use octokit.net in a thread-safe way</title>
-	<link>https://github.com/octokit/octokit.net/issues/2444</link>
-	<description><![CDATA[ <pre><p>I can’t find it anywhere</p></pre> ]]></description>
-</item>
-
-<item>	<title>Support Etags</title>
-	<link>https://github.com/octokit/octokit.net/issues/352</link>
-	<description><![CDATA[ <pre><p>GitHub API supports Etags! But Octokit.net does not.</p>
-<p><img src="https://raw2.github.com/Haacked/gifs/master/sad/cute-sad.gif" /></p>
-<p>We should support this! But it’s a teensy bit tricky. If we only support this at the <code>ApiConnection</code> or <code>Connection</code> level, then using Octokit becomes kind of a pain for everyone.</p>
-<p>Ideally, it’s part of our top level api. But that poses a problem as well, do we just add an Etag property to the models? Then what do we do about cases like this?</p>
-<pre><code>IObservable&lt;Repository&gt; GetRepositories();</code></pre>
-<p>The ETag for that request (or set of requests) is for the list of repositories. Each individual repository won’t have an etag.</p>
-<p>Thoughts?</p></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: HTTP caching middleware returns cached responses to wrong users</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1660</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p>In version 4.22.0 (<strong>and onwards</strong>), <code>http.authorization 'Bearer', @bearer_token</code> (which immediately sets the <code>Authorization</code> header) was changed to <code>http.request :authorization, 'Bearer', @bearer_token</code>, which instead adds the <code>Faraday::Request::Authorization</code> to the middleware chain, which sets the <code>Authorization</code> header when called.</p>
-<p>Since the authorization middleware is added at the point of the request, while the caching middleware is added on Faraday initialization (as suggested in the README), it means that the HTTP caching middleware runs first, and the authorization middleware runs second.</p>
-<p>This means that when the caching middleware runs, it does not have the <code>Authorization</code> header set, and therefore caches requests and then returns them without having the ability to know that these requests are for different users.</p>
-<p>For example, <code>GET /user/installations?per_page=100</code> should return different results for different users, but with the HTTP caching enabled, it does not.</p>
-<p>I have a PR that fixes the issue here: https://github.com/octokit/octokit.rb/pull/1661/files. Open to other approaches as well.</p>
-<h3 id="versions">Versions</h3>
-<p>Octokit v8.0.0, Ruby v3.2.2</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Provide response types with Sorbet</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1659</link>
+<item>	<title>[FEAT]: Make it easier to use github app installation tokens</title>
+	<link>https://github.com/octokit/octokit.rb/issues/1716</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Currently, the return type of all methods is <a href="https://www.rubydoc.info/gems/sawyer/Sawyer/Resource"><code>Sawyer::Resource</code></a>. This is pretty much a hash/dictionary object of the response body.</p>
-<p>It would be more useful to consumers of the Octokit gem to provide type safety and discoverability of the responses by creating models, similar to those provided for the <a href="https://github.com/octokit/types.ts">TypeScript</a> and <a href="https://github.com/octokit/octokit.net/tree/main/Octokit/Models">.NET</a> Octokit SDKs.</p>
-<p>Using something like <a href="https://sorbet.org/">Sorbet</a> would allow for strongly typed models, and can be automatically generated from GitHub OpenAPI schema using something like <a href="https://www.jvt.me/posts/2023/05/31/openapi-sorbet/"><code>openapi-sorbet</code></a>.</p>
+<p>I wanted to perform actions on github repo’s as the application - not an individual user who might leave the organisation.</p>
+<p>I was trying to use a client_id and client_secret for this, but not succeeding.</p>
+<p>I ended up following the <a href="https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app">instructions here</a>.</p>
+<p>This works, but:
+- It’s not explained well <a href="https://github.com/octokit/octokit.rb?tab=readme-ov-file#github-app">in the Readme</a>.
+- Involved me copy+pasting the private key =&gt; JWT generation code.</p>
+<p>Ideally the client signature would instead be something like:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Octokit</span><span class="kw">::</span><span class="dt">Client</span><span class="at">.new</span>(<span class="wa">app_id: </span><span class="kw">&lt;</span>my <span class="dv">20</span> character app id<span class="kw">&gt;</span>, <span class="wa">private_key: </span><span class="kw">&lt;</span>key contents<span class="kw">&gt;</span>, <span class="wa">installation_id: </span><span class="kw">&lt;</span><span class="cn">ID</span><span class="kw">&gt;</span>)</span></code></pre></div>
+<p>The SDK would handle the juggling that happens behind the scenes. This seems similar to <a href="https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation">how the JS client works</a>.</p>
 <h3 id="sdk-version">SDK Version</h3>
 <p><em>No response</em></p>
 <h3 id="api-version">API Version</h3>
@@ -764,7 +812,7 @@ This bug occurs only when the folder or file name contains #.</p></pre> ]]></des
 <p><em>No response</em></p>
 <h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
 </ul></pre> ]]></description>
 </item>
 
@@ -783,88 +831,8 @@ WHY???</p>
 <p><em>No response</em></p>
 <h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
+<li><label><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</label></li>
 </ul></pre> ]]></description>
-</item>
-
-<item>	<title>[FEAT]: Refresh a user's access token with refresh token</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1652</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-need">Describe the need</h3>
-<p>Access tokens are valid upto 8 hours and we need a way of refresh, which is quiet possible using a refresh token</p>
-<p>Ref: https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/refreshing-user-access-tokens#refreshing-a-user-access-token-with-a-refresh-token</p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: Fetch a given reference uses the wrong API</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1628</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p>The following method: https://github.com/octokit/octokit.rb/blob/main/lib/octokit/client/refs.rb#L46 is presumably the analog to this <a href="https://docs.github.com/en/rest/git/refs?apiVersion=2022-11-28#get-a-reference">API</a>.</p>
-<p>However, the endpoint used is <code>refs</code> (plural) not <code>ref</code> (singular) which causes this API to behave like the <code>matching-refs</code> API, which I think is incorrect since we already have a separate API for that.</p>
-<p>We can check that the API does produce unintended output, from this example: https://api.github.com/repos/tramlinehq/ueno/git/refs/tags/v10 (which is what the method uses).</p>
-<p>In here, <code>refs/tags/v10</code> is not a valid ref in this case.</p>
-<p>If this issue seems genuine, happy to drop a PR to correct it.</p>
-<h3 id="versions">Versions</h3>
-<p>Octokit.rb v7.1.0</p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>[BUG]: `check_runs_for_check_suite` generates invalid path if a repo string is passed in</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1574</link>
-	<description><![CDATA[ <pre><h3 id="what-happened">What happened?</h3>
-<p><code>check_runs_for_check_suite</code> accepts a repo name or id and then renders it to an API url using the <a href="https://github.com/octokit/octokit.rb/blob/d5eec6e8db61b7548e0235b84414e8ffa272a5b2/lib/octokit/repository.rb#L49">path helper</a>:</p>
-<ol type="1">
-<li>Repo name case ❌ :
-<ul>
-<li>result: <code>repos/:repo_nwo/check-suites/:check_suite_id/check-runs</code></li>
-<li><a href="https://docs.github.com/en/rest/checks/runs?apiVersion=2022-11-28#get-a-check-run">expected</a>: <code>/repos/{owner}/{repo}/check-runs/{check_run_id}</code></li>
-</ul></li>
-<li>Repo ID case ✅ :
-<ul>
-<li>result: <code>repositories/:repo_id/check-suites/:check_suite_id/check-runs</code></li>
-<li>expected: same as above</li>
-</ul></li>
-</ol>
-<h3 id="versions">Versions</h3>
-<p><code>gem \"octokit\", \"~&gt; 4.18.0\"</code></p>
-<h3 id="relevant-log-output">Relevant log output</h3>
-<p><em>No response</em></p>
-<h3 id="code-of-conduct">Code of Conduct</h3>
-<ul class="task-list">
-<li><input type="checkbox" checked="" />I agree to follow this project’s Code of Conduct</li>
-</ul></pre> ]]></description>
-</item>
-
-<item>	<title>Retry strategy on rate limit</title>
-	<link>https://github.com/octokit/octokit.rb/issues/1490</link>
-	<description><![CDATA[ <pre><p>Coming from https://github.com/octokit/octokit.rb/issues/1489 I am attempting to handle the rate limit as follows.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">module</span> <span class="dt">GitHub</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">module</span> <span class="dt">RateLimited</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">def</span> rate_limited(<span class="kw">&amp;</span>_block)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      suspend_s <span class="kw">=</span> <span class="dv">5</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">begin</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> <span class="cf">if</span> <span class="fu">block_given?</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">rescue</span> <span class="dt">Octokit</span><span class="kw">::</span><span class="dt">TooManyRequests</span> <span class="kw">=&gt;</span> e</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> suspend_s</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        suspend_s <span class="kw">=</span> <span class="kw">[</span>suspend_s <span class="kw">*</span> <span class="dv">2</span>, client<span class="at">.rate_limit.resets_in</span> <span class="kw">+</span> <span class="dv">1</span><span class="kw">]</span><span class="at">.min</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">retry</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">end</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
-<p>There are a few problems here.</p>
-<ol type="1">
-<li>It’s not built into auto-pagination in octokit, so the entire set of pagination requests will be retried. Is there a better implementation?</li>
-<li>The <code>rate_limit.resets_in</code> value does not seem like the right amount of time to wait. It is the entire duration till the next reset, even before I have consumed all requests. How do I obtain the time when I will be allowed to make the next request, aka the cool down time?</li>
-<li>Is this something we should/can build into Octokit? I can give it a shot.</li>
-</ol></pre> ]]></description>
 </item>
 
 
